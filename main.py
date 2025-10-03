@@ -7,17 +7,49 @@ Guessing the number
 import random
 
 # Variables
-number = random.randint(10, 11)
+number = random.randint(10, 30)
+# attempts_required = random.randint(10, 30)
 attempts = 0
-"""
-def END(exiting_game):
-    return exiting_game 
-"""
 
-print("Guess the number I'm thinking of")
-print("I've chosen a number between 10 and 100")
-players_try = float(input("The number you're thinking of is : "))
-if players_try != number:
+
+
+play_game = True
+guessing = True
+players_try = 0
+
+
+while play_game:
+    input("Appuyer pour commencer")
+    print("Le nombre que j'ai choisi est entre 10 et 30")
+    while guessing:
+        players_try = int(input("Quel nombre tu penses que j'ai en tête?  "))
+
+        if players_try > number:
+            print("Tu devrais sous-estimer mon pouvoir! ")
+
+        elif players_try < number:
+            print("C'est fini Anakin, j'ai la haute main! ")
+
+        else:
+            guessing = True
+            print("Bravo, je vous applaudis")
+            decisions = str(input("Voulez-vous rejouer? y/n "))
+            if decisions == "n":
+                guessing = False
+
+            else:
+                pass
+    # Demander au joueur s'il veut jouer encore.
+    # Si non, play_game = False
+"""
+# print(f"To make it more challenging, guess it in {attempts_required}")
+
+
+if 30 < players_try < 10:
+    print("Between 10 and 30")
+    attempts += 1
+
+elif players_try != number:
     attempts += 1
     print("Nope! Try again.")
 
@@ -33,8 +65,10 @@ if players_try != number:
 else:
     print("Nice work!")
     print(f"You did it in {attempts} attempts.")
+
+
 # input(int("Type 1234 to end"))
 # deciding_to_end = input(int("Type 1234 to end"))
 # END(deciding_to_end)
 # difficulty = input("choose your difficulty, easy medium hard")
-# input("Press any key to start")
+"""
