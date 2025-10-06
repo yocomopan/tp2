@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a720529-8efd-4a4e-946a-096060ad8485" name="Changes" comment="Modif. attempts variable">
+    <list default="true" id="9a720529-8efd-4a4e-946a-096060ad8485" name="Changes" comment="Modif. removed massive code of if/else, added while, variables = true">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -37,13 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="tp2" />
@@ -116,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759519449414</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modif. removed massive code of if/else, added while, variables = true">
+      <option name="closed" value="true" />
+      <created>1759522874732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759522874732</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,6 +132,7 @@
     <MESSAGE value="Modif. variables, prints, floats, inputs, if else, while" />
     <MESSAGE value="Modif. attempt + 1" />
     <MESSAGE value="Modif. attempts variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif. attempts variable" />
+    <MESSAGE value="Modif. removed massive code of if/else, added while, variables = true" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif. removed massive code of if/else, added while, variables = true" />
   </component>
 </project>

@@ -11,64 +11,68 @@ number = random.randint(10, 30)
 # attempts_required = random.randint(10, 30)
 attempts = 0
 
-
-
 play_game = True
 guessing = True
 players_try = 0
 
-
 while play_game:
     input("Appuyer pour commencer")
-    print("Le nombre que j'ai choisi est entre 10 et 30")
+    # Variable minimale
+    a = int(input("chiffre minimale SVP: "))
+    # limite du plus petit nombre possible, donc pas moins que 0
+    if a < 0:
+        print("OOPS! Desole, pas moins que 0")
+        continue
+    # Variable maximale
+    b = int(input("chiffre maximale SVP: "))
+    # limite du plus grand nombre possible, donc pas plus que 100
+    if b > 100:
+        print("OOPS! Desole, pas plus que 100")
+        continue
+    # Ordinateur choisi son chiffre entre la valeur maximale et minimale choisi.
+    number = random.randint(a, b)
+    print(f"J'ai choisi un nombre entre {a} et {b} ")
     while guessing:
-        players_try = int(input("Quel nombre tu penses que j'ai en tête?  "))
+
+        players_try = int(input("une autre essaie? "))
+        attempts += 1
+
+        if players_try < a or players_try > b:
+            print(f"entre {a} et {b}.")
+            continue
 
         if players_try > number:
-            print("Tu devrais sous-estimer mon pouvoir! ")
+            print("Je n'en voudrais plus de brownie special")
 
         elif players_try < number:
             print("C'est fini Anakin, j'ai la haute main! ")
 
         else:
             guessing = True
-            print("Bravo, je vous applaudis")
-            decisions = str(input("Voulez-vous rejouer? y/n "))
+            print(f"Bravo, vous avez reussis en {attempts} essaies")
+            decisions = input("Voulez-vous rejouer? y/n ")
             if decisions == "n":
+                print("Merci et bon soir.")
                 guessing = False
+                play_game = False
 
             else:
-                pass
-    # Demander au joueur s'il veut jouer encore.
-    # Si non, play_game = False
-"""
-# print(f"To make it more challenging, guess it in {attempts_required}")
+                guessing = True
+                attempts = 0
+                a = int(input("chiffre minimale SVP: "))
+                # limite du plus petit nombre possible, donc pas moins que 0
+                if a < 0:
+                    print("OOPS! Desole, pas moins que 0")
+                    exit(guessing)
 
+                b = int(input("chiffre maximale SVP: "))
+                # limite du plus grand nombre possible, donc pas plus que 100
+                if b > 100:
+                    print("OOPS! Desole, pas plus que 100")
+                    exit(guessing)
 
-if 30 < players_try < 10:
-    print("Between 10 and 30")
-    attempts += 1
+                number = random.randint(a, b)
+                print(f"J'ai choisi un nombre entre {a} et {b} ")
 
-elif players_try != number:
-    attempts += 1
-    print("Nope! Try again.")
-
-    while number != players_try:
-        attempts += 1
-        players_try = float(input("The number you're thinking of is : "))
-        if players_try == number:
-            print("Nice Work!")
-            print(f"You did it in {attempts} attempts.")
-        else:
-            print("Nope!")
-
-else:
-    print("Nice work!")
-    print(f"You did it in {attempts} attempts.")
-
-
-# input(int("Type 1234 to end"))
-# deciding_to_end = input(int("Type 1234 to end"))
-# END(deciding_to_end)
-# difficulty = input("choose your difficulty, easy medium hard")
-"""
+# Demander au joueur s'il veut jouer encore.
+# Si non, play_game = False
