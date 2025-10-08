@@ -14,31 +14,47 @@ attempts = 0
 play_game = True
 guessing = True
 players_try = 0
+lower_bounds = 0
+higher_bounds = 100
+
+
+def min():
+    # Variable minimale
+    lower_bounds = int(input("chiffre minimale SVP: "))
+    # limite du plus petit nombre possible, donc pas moins que 0
+    if lower_bounds < 0:
+        print("OOPS! Desole, pas moins que 0")
+    return lower_bounds
+
+def max():
+    # Variable maximale
+    higher_bounds = int(input("chiffre maximale SVP: "))
+    # limite du plus grand nombre possible, donc pas plus que 100
+    if higher_bounds > 100:
+        print("OOPS! Desole, pas plus que 100")
+    return higher_bounds
+
 
 while play_game:
     input("Appuyer pour commencer")
-    # Variable minimale
-    a = int(input("chiffre minimale SVP: "))
-    # limite du plus petit nombre possible, donc pas moins que 0
-    if a < 0:
-        print("OOPS! Desole, pas moins que 0")
-        continue
-    # Variable maximale
-    b = int(input("chiffre maximale SVP: "))
-    # limite du plus grand nombre possible, donc pas plus que 100
-    if b > 100:
-        print("OOPS! Desole, pas plus que 100")
-        continue
-    # Ordinateur choisi son chiffre entre la valeur maximale et minimale choisi.
-    number = random.randint(a, b)
-    print(f"J'ai choisi un nombre entre {a} et {b} ")
+
+    choice = input("Voulez-vous changer les bornes? y/n ")
+    if choice == "y":
+        number = random.randint(max(), min())
+        print(f"J'ai choisi un nombre entre {lower_bounds} et {higher_bounds} ")
+    else:
+
+        # Ordinateur choisi son chiffre entre la valeur maximale et minimale choisi.
+        number = random.randint(lower_bounds, higher_bounds)
+        print(f"J'ai choisi un nombre entre {lower_bounds} et {higher_bounds} ")
+
     while guessing:
 
-        players_try = int(input("une autre essaie? "))
+        players_try = int(input("Votre reponse? "))
         attempts += 1
 
-        if players_try < a or players_try > b:
-            print(f"entre {a} et {b}.")
+        if players_try < lower_bounds or players_try > higher_bounds:
+            print(f"entre {lower_bounds} et {higher_bounds}.")
             continue
 
         if players_try > number:
@@ -57,22 +73,9 @@ while play_game:
                 play_game = False
 
             else:
-                guessing = True
+                guessing = False
+                Play_game = True
                 attempts = 0
-                a = int(input("chiffre minimale SVP: "))
-                # limite du plus petit nombre possible, donc pas moins que 0
-                if a < 0:
-                    print("OOPS! Desole, pas moins que 0")
-                    exit(guessing)
-
-                b = int(input("chiffre maximale SVP: "))
-                # limite du plus grand nombre possible, donc pas plus que 100
-                if b > 100:
-                    print("OOPS! Desole, pas plus que 100")
-                    exit(guessing)
-
-                number = random.randint(a, b)
-                print(f"J'ai choisi un nombre entre {a} et {b} ")
 
 # Demander au joueur s'il veut jouer encore.
 # Si non, play_game = False

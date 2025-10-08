@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a720529-8efd-4a4e-946a-096060ad8485" name="Changes" comment="Modif. removed massive code of if/else, added while, variables = true">
+    <list default="true" id="9a720529-8efd-4a4e-946a-096060ad8485" name="Changes" comment="Modif. variables, nb  d'essaies, decisions, if/elif/else, commentaires.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -124,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759522874732</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modif. variables, nb  d'essaies, decisions, if/elif/else, commentaires.">
+      <option name="closed" value="true" />
+      <created>1759776923994</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759776923994</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +141,7 @@
     <MESSAGE value="Modif. attempt + 1" />
     <MESSAGE value="Modif. attempts variable" />
     <MESSAGE value="Modif. removed massive code of if/else, added while, variables = true" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif. removed massive code of if/else, added while, variables = true" />
+    <MESSAGE value="Modif. variables, nb  d'essaies, decisions, if/elif/else, commentaires." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif. variables, nb  d'essaies, decisions, if/elif/else, commentaires." />
   </component>
 </project>
