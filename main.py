@@ -3,53 +3,70 @@
 Ivan Zheryakov
 Guessing the number
 """
-
+# On est import la module de random
 import random
 
-# Variables
-number = random.randint(10, 30)
-# attempts_required = random.randint(10, 30)
-attempts = 0
+# =-=-=-= Variables =-=-=-=
+number = random.randint(0, 100)  # Generateur de nombre
 
+# Les boucles du jeu. Si faux = Programme termine
 play_game = True
 guessing = True
+
+# Le nombre d'essaie que le joueur fera.
+attempts = 0
 players_try = 0
+
+# Les bornes maximales et minimales
 lower_bounds = 0
 higher_bounds = 100
 
 
-def min():
-    # Variable minimale
+# =-=-=-= Definitions =-=-=-=
+def mini():  # La definition mini() permet de changer la borne minimale
+    # lower_bounds = global, sinon le programme pensera que c'est une nouvelle varaible
+    global lower_bounds
     lower_bounds = int(input("chiffre minimale SVP: "))
-    # limite du plus petit nombre possible, donc pas moins que 0
-    if lower_bounds < 0:
+    if lower_bounds < 0:  # Si c'est plus petit que 0, forcer d'utiliser 0 .
         print("OOPS! Desole, pas moins que 0")
-    return lower_bounds
+        lower_bounds = 0
+    return lower_bounds  # nouvelle information retourne au "number"
 
-def max():
-    # Variable maximale
+
+def maxi():  # La definition maxi() permet de changer la borne maximale
+    # higher_bounds = global, sinon le programme pensera que c'est une nouvelle varaible
+    global higher_bounds
     higher_bounds = int(input("chiffre maximale SVP: "))
-    # limite du plus grand nombre possible, donc pas plus que 100
-    if higher_bounds > 100:
+    if higher_bounds > 100:  # Si c'est plus grand que 100, forcer d'utiliser 100 .
         print("OOPS! Desole, pas plus que 100")
-    return higher_bounds
+        higher_bounds = 100
+    return higher_bounds  # nouvelle information retourne au "number"
 
 
-while play_game:
+# =-=-=-= Code Principal =-=-=-=
+while play_game:  # La boucle qui permet a l'usager de rejouer.
     input("Appuyer pour commencer")
 
+    # Choix de changer les bornes
     choice = input("Voulez-vous changer les bornes? y/n ")
-    if choice == "y":
-        number = random.randint(max(), min())
-        print(f"J'ai choisi un nombre entre {lower_bounds} et {higher_bounds} ")
-    else:
 
-        # Ordinateur choisi son chiffre entre la valeur maximale et minimale choisi.
+    if choice == "y":
+        # Si oui, les bornes sont envoyees aux def() pour recevoir de la nouvelle information
+        # L'ordinateur choisi son chiffre entre les bornes modifiees.
+        number = random.randint(mini(), maxi())
+        print(f"J'ai choisi un nombre entre {lower_bounds} et {higher_bounds} ")
+
+    else:
+        # Si non, l'ordinateur choisi son chiffre entre les bornes originaux.
         number = random.randint(lower_bounds, higher_bounds)
         print(f"J'ai choisi un nombre entre {lower_bounds} et {higher_bounds} ")
 
+    guessing = True  # Reactive le jeu pour laisser l'usager jouer. Plus de details a la ligne 91
+
+    # >>> Jeu <<<
     while guessing:
 
+        # L'usager essaie de deviner le chiffre choisi.
         players_try = int(input("Votre reponse? "))
         attempts += 1
 
@@ -77,5 +94,3 @@ while play_game:
                 Play_game = True
                 attempts = 0
 
-# Demander au joueur s'il veut jouer encore.
-# Si non, play_game = False
