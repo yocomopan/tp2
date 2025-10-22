@@ -90,6 +90,8 @@ while play_game:  # La boucle qui permet a l'usager de rejouer.
                 play_game = False
 
             else:
+                lower_bounds = 0
+                higher_bounds = 100
                 guessing = False
                 Play_game = True
                 attempts = 0
