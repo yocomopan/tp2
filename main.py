@@ -86,5 +86,5 @@ while play_game:
                 lower_bounds = 0
                 higher_bounds = 100
                 guessing = False
-                Play_game = True
+                play_game = True
                 attempts = 0
