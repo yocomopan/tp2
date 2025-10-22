@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a720529-8efd-4a4e-946a-096060ad8485" name="Changes" comment="Modif globaux variables, Commentaires pour faciliter la lecture">
+    <list default="true" id="9a720529-8efd-4a4e-946a-096060ad8485" name="Changes" comment="Modif. reset bornes a la fin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760107505686</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Modif. reset bornes a la fin">
+      <option name="closed" value="true" />
+      <created>1761145841393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761145841393</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,6 +167,7 @@
     <MESSAGE value="Modif. variables, nb  d'essaies, decisions, if/elif/else, commentaires." />
     <MESSAGE value="Modif. probleme de definition" />
     <MESSAGE value="Modif globaux variables, Commentaires pour faciliter la lecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif globaux variables, Commentaires pour faciliter la lecture" />
+    <MESSAGE value="Modif. reset bornes a la fin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif. reset bornes a la fin" />
   </component>
 </project>
